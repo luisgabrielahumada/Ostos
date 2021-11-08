@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Common\**" />
+    <EmbeddedResource Remove="Common\**" />
+    <None Remove="Common\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common.Infrastructure\Common.Infrastructure.csproj" />
+    <ProjectReference Include="..\Common.Shared\Common.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Core.Component.Library.Json" Version="5.0.0" />
+    <PackageReference Include="Core.Component.Library.Security" Version="5.0.0" />
+    <PackageReference Include="Core.Component.Library.Smtp" Version="5.0.0" />
+    <PackageReference Include="Core.Component.Library.SQL" Version="5.0.0" />
+    <PackageReference Include="Core.Component.Library.WebTools" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
+  </ItemGroup>
+
+</Project>
